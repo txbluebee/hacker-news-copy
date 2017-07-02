@@ -5,6 +5,10 @@
     </li>
     <li>
       <%= current_user.email %>
+      <%= current_user.address %>
+    </li>
+    <li>
+      <%= link_to 'Edit Account', edit_user_registration_path %>
     </li>
   <% else %>
     <li>
