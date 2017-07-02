@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_action :find_post
-
+  before_action :authenticate_user!, :only => [:new]
+  
   def new
     @comment = @post.comments.new
   end
